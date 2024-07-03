@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: spring-starbucks-client
+  namespace: default
+  labels:
+    name: spring-starbucks-client
+spec:
+  containers:
+    - image: raidenpoi/spring-starbucks-client:v2.2
+      name: spring-starbucks-client
+      ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
